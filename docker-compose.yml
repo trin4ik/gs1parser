@@ -1,0 +1,13 @@
+services:
+  gs1parser:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - test
+      - build
+      - dev
+      - example

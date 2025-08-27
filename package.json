@@ -1,0 +1,50 @@
+{
+  "name": "gs1parser",
+  "version": "1.0.0",
+  "description": "GS1 string parser with separator restoration for barcode scanners",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepare": "npm run build",
+    "docker:test": "./scripts/docker-test.sh",
+    "docker:build": "./scripts/docker-build.sh",
+    "docker:dev": "./scripts/docker-dev.sh",
+    "docker:example": "./scripts/docker-example.sh",
+    "docker:real-world": "./scripts/docker-real-world.sh",
+    "test-my-code": "./scripts/test-my-code.sh",
+    "publish": "./scripts/publish.sh"
+  },
+  "keywords": [
+    "gs1",
+    "barcode",
+    "datamatrix",
+    "parser",
+    "scanner",
+    "ai",
+    "application-identifier"
+  ],
+  "author": "GS1 Parser Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/gs1parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/gs1parser/issues"
+  },
+  "homepage": "https://github.com/yourusername/gs1parser#readme"
+}
