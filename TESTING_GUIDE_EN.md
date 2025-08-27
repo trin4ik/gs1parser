@@ -103,14 +103,14 @@ const result = parseGS1('010123456789012891123456', {
 - **11-17** (Dates) - 6 digits (YYMMDD)
 - **20** (Variant) - 2 digits
 - **410-417** (GLN) - 13 digits
-- And many more...
+- And many more... ([full list](https://ref.gs1.org/standards/genspecs/))
 
 ### Variable AIs
 - **10** (Batch/Lot) - up to 20 characters
 - **21** (Serial) - up to 20 characters
 - **91-99** (Internal) - up to 90 characters
 - **400-403** (Order/Route) - up to 30 characters
-- And many more...
+- And many more... ([full list](https://ref.gs1.org/standards/genspecs/))
 
 ## Error Handling
 

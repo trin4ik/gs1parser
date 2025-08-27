@@ -16,13 +16,13 @@ A TypeScript/JavaScript library for parsing GS1 strings from barcode scanners an
 ## Installation
 
 ```bash
-npm install gs1parser
+npm install @trin4ik/gs1parser
 ```
 
 ## Quick Start
 
 ```typescript
-import { GS1Parser, parseGS1 } from 'gs1parser';
+import { GS1Parser, parseGS1 } from '@trin4ik/gs1parser';
 
 // Using the class
 const parser = new GS1Parser();
@@ -135,7 +135,7 @@ Quick parsing function that creates a parser instance and parses the input.
 ### Basic Usage
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser();
 const result = parser.parse('010123456789012817123456');
@@ -151,7 +151,7 @@ if (result.success) {
 ### Custom Configuration
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser({
   separator: '|',
@@ -169,7 +169,7 @@ const result = parser.parse('0101234567890128XXX91123456');
 ### Handling Scanner Artifacts
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser();
 
@@ -184,7 +184,7 @@ const result = parser.parse('0101234567890128 029 91123456');
 ### Working with Variable-Length AIs
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser();
 const result = parser.parse('011234567890123210BATCH12321SERIAL456');
@@ -209,14 +209,14 @@ The library supports a comprehensive set of GS1 Application Identifiers includin
 - **20** (VARIANT) - 2 digits
 - **310n-369n** (Measures) - 6 digits
 - **410-417** (GLN) - 13 digits
-- And many more...
+- And many more... ([full list](https://ref.gs1.org/standards/genspecs/))
 
 ### Variable-Length AIs
 - **10** (BATCH/LOT) - up to 20 characters
 - **21** (SERIAL) - up to 20 characters
 - **91-99** (INTERNAL) - up to 90 characters
 - **400-403** (Order/Route) - up to 30 characters
-- And many more...
+- And many more... ([full list](https://ref.gs1.org/standards/genspecs/))
 
 ## Error Handling
 

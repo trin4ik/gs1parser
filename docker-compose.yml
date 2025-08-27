@@ -1,3 +1,4 @@
+name: gs1parser
 services:
   gs1parser:
     image: node:20-alpine
@@ -6,8 +7,4 @@ services:
       - .:/app
     environment:
       - NODE_ENV=development
-    profiles:
-      - test
-      - build
-      - dev
-      - example
+

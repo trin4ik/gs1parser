@@ -18,13 +18,13 @@
 ## Установка
 
 ```bash
-npm install gs1parser
+npm install @trin4ik/gs1parser
 ```
 
 ## Быстрый старт
 
 ```typescript
-import { GS1Parser, parseGS1 } from 'gs1parser';
+import { GS1Parser, parseGS1 } from '@trin4ik/gs1parser';
 
 // Использование класса
 const parser = new GS1Parser();
@@ -137,7 +137,7 @@ new GS1Parser(config?: GS1ParserConfig)
 ### Базовое использование
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser();
 const result = parser.parse('010123456789012817123456');
@@ -153,7 +153,7 @@ if (result.success) {
 ### Кастомная конфигурация
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser({
   separator: '|',
@@ -171,7 +171,7 @@ const result = parser.parse('0101234567890128XXX91123456');
 ### Обработка артефактов сканера
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser();
 
@@ -186,7 +186,7 @@ const result = parser.parse('0101234567890128 029 91123456');
 ### Работа с AI переменной длины
 
 ```typescript
-import { GS1Parser } from 'gs1parser';
+import { GS1Parser } from '@trin4ik/gs1parser';
 
 const parser = new GS1Parser();
 const result = parser.parse('011234567890123210BATCH12321SERIAL456');
@@ -211,14 +211,14 @@ console.log(result.tokens);
 - **20** (VARIANT) - 2 цифры
 - **310n-369n** (Меры) - 6 цифр
 - **410-417** (GLN) - 13 цифр
-- И многие другие...
+- И многие другие... ([полный список](https://ref.gs1.org/standards/genspecs/))
 
 ### AI с переменной длиной
 - **10** (BATCH/LOT) - до 20 символов
 - **21** (SERIAL) - до 20 символов
 - **91-99** (INTERNAL) - до 90 символов
 - **400-403** (Order/Route) - до 30 символов
-- И многие другие...
+- И многие другие... ([полный список](https://ref.gs1.org/standards/genspecs/))
 
 ## Обработка ошибок
 

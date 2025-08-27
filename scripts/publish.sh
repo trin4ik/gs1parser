@@ -40,7 +40,7 @@ fi
 
 # Check if user is logged in to npm
 echo "🔐 Checking NPM login status..."
-docker run --rm -v "$(pwd):/app" -w /app node:20-alpine sh -c "npm whoami" 2>/dev/null
+docker run --rm -v "$(pwd):/app" -v "$HOME/.npmrc":/root/.npmrc:ro -w /app node:20-alpine sh -c "npm whoami" 2>/dev/null
 
 if [ $? -ne 0 ]; then
   echo "❌ Not logged in to NPM. Please run 'npm login' first."
@@ -49,7 +49,7 @@ fi
 
 # Publish
 echo "📤 Publishing to NPM..."
-docker run --rm -v "$(pwd):/app" -w /app node:20-alpine sh -c "npm publish"
+docker run --rm -v "$(pwd):/app" -v "$HOME/.npmrc":/root/.npmrc:ro -w /app node:20-alpine sh -c "npm publish"
 
 if [ $? -eq 0 ]; then
   echo "✅ Successfully published to NPM!"
